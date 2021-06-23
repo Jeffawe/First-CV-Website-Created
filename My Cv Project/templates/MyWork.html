@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="HandheldFriendly" content="true">
+    <title>I'm Jeffery!</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sophia">
+    <link rel="stylesheet" href="./main.css">
+    <script src="https://kit.fontawesome.com/2826dfd89b.js" crossorigin="anonymous"></script>
+</head>
+<style>
+
+
+</style>
+
+<body>
+    <div class="w3-display-container w3-mobile w3-black" style = "width: 100%; height:100%">
+        <div class="w3-bar w3-display-topmiddle w3-container w3-center">
+            <a href="./CV.html" class="w3-bar w3-text-white w3-btn">
+                <h5>Home</h5>
+            </a>
+            <a href="./MyWork.html" class="w3-bar w3-text-white w3-btn">
+                <h5>My Work</h5>
+            </a>
+            <a href="#" class="w3-bar w3-text-white w3-btn">
+                <h5 onclick="document.getElementById('id01').style.display='block'">Profile</h5>
+            </a>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+
+
+        <!-- The Modal -->
+        <div id="id01" class="w3-modal" style = "width: 100%">
+            <div class="w3-modal-content w3-animate-zoom w3-card-4">
+                <div class="w3-row">
+                    <span onclick="document.getElementById('id01').style.display='none'"
+                        class="w3-button w3-display-topright w3-text-black">&times;</span>
+                    <div class="w3-center w3-text-black">
+                        <h1 class ="w3-monospace"> About me </h1>
+                    </div>
+                    <br>
+                    <br>
+                    <div class="w3-third w3-container">
+                        <img src="img_avatar3.png" style="width:100%"
+                            class="w3-round w3-image w3-hover-opacity w3-fixed" alt="Alps">
+                    </div>
+                    <div class="w3-twothird w3-container">
+                        <p class="w3-margin w3-left-align w3-text-black w3-monospace w3-center"> I'm Ozoekwe-Awagu Jeffery and I write, a lot. I also enjoy playing video games and building them. <br><br><br><br>
+                              I'm always up for a bit of web based coding using HTML, CSS and Javascript. I'm an energetic and motivated individual, without the coffee.       </p>
+                    </div>
+                </div>
+                <br>
+                <br>
+                <div class="w3-container w3-white">
+                    <div class="w3-center w3-section">
+                        <a href = "2020 Vol Internship CV Template (1).docx.pdf"><button class="w3-button w3-round-xxlarge w3-black w3-large">Download Resume</button></a>
+                    </div>
+                    <br>
+                    <br>
+                    <br>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="w3-row-padding w3-center">
+            <div class="w3-col s5 w3-container w3-card-4 animate__animated animate__zoomIn" style = "margin: 5%; margin-left: 28%">
+                <a href="https://simmer.io/@Jeffawe/racing-legends" class="w3-hover-opacity" onclick="openImg('Snow');">
+                    <img src="racingL.png" alt="Snow" style="width:100%">
+                    <div class="w3-container w3-center" style = "text-decoration: none">
+                        <h1>Racing Legends</h1>
+                    </div>
+                </a>
+            </div>
+            <div class="w3-col s5 w3-container w3-card-4 animate__animated animate__zoomIn" style = "margin: 5%; margin-left: 28%">
+                <a href="https://simmer.io/@Jeffawe/unity-cube" class="w3-hover-opacity" onclick="openImg('Snow');">
+                    <img src="UnityCube.png" alt="Snow" style="width:100%">
+                    <div class="w3-container w3-center" style = "text-decoration: none">
+                        <h1>Unity Cube</h1>
+                    </div>
+                </a>
+            </div>
+        </div><br>
+        <br>
+        <br>
+        <br>
+        <br>
+    </div>
+
+
+
+
+    <!-- The footer-->
+    <footer class="w3-container w3-black w3-mobile" style = "width: 100%; height:100%">
+        <br>
+        <br>
+        <div class="w3-row">
+            <div class="w3-container  w3-twothird">
+                <p style="padding-left:100px">Designed by Ozoekwe-Awagu Jeffery</p>
+            </div>
+            <div class="w3-container w3-third w3-right-align" style="padding-right:180px">
+                <a href = "https://www.linkedin.com/in/jeffery-ozoekwe-awagu-74319618a/"><button class="w3-btn"><i class="fab fa-linkedin-in" style="font-size:20px"></i></button></a>
+                <a href = "./Email.html"><button class="w3-btn"><i class="fas fa-envelope" style="font-size:20px"></i></button></a>
+                <a href = "https://www.instagram.com/jeff_awagu/"><button class="w3-btn"><i class="fab fa-instagram" style="font-size:20px"></i></button></a>
+                <a href = "https://www.facebook.com/profile.php?id=100011658587747&viewas=100000686899395"><button class="w3-btn"><i class="fab fa-facebook" style="font-size:20px"></i></button></a>
+            </div>
+        </div>
+        <br>
+
+    </footer>
+
+
+    <script>
+        var TxtType = function (el, toRotate, period) {
+            this.toRotate = toRotate;
+            this.el = el;
+            this.loopNum = 0;
+            this.period = parseInt(period, 10) || 2000;
+            this.txt = '';
+            this.tick();
+            this.isDeleting = false;
+        };
+
+        TxtType.prototype.tick = function () {
+            var i = this.loopNum % this.toRotate.length;
+            var fullTxt = this.toRotate[i];
+
+            if (this.isDeleting) {
+                this.txt = fullTxt.substring(0, this.txt.length - 1);
+            } else {
+                this.txt = fullTxt.substring(0, this.txt.length + 1);
+            }
+
+            this.el.innerHTML = '<span class="wrap">' + this.txt + '</span>';
+
+            var that = this;
+            var delta = 200 - Math.random() * 100;
+
+            if (this.isDeleting) { delta /= 2; }
+
+            if (!this.isDeleting && this.txt === fullTxt) {
+                delta = this.period;
+                this.isDeleting = true;
+            } else if (this.isDeleting && this.txt === '') {
+                this.isDeleting = false;
+                this.loopNum++;
+                delta = 500;
+            }
+
+            setTimeout(function () {
+                that.tick();
+            }, delta);
+        };
+
+        window.onload = function () {
+            var elements = document.getElementsByClassName('typewrite');
+            for (var i = 0; i < elements.length; i++) {
+                var toRotate = elements[i].getAttribute('data-type');
+                var period = elements[i].getAttribute('data-period');
+                if (toRotate) {
+                    new TxtType(elements[i], JSON.parse(toRotate), period);
+                }
+            }
+        };
+    </script>
+
+
+
+
+</body>
+
+</html>
